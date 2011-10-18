@@ -1,4 +1,6 @@
 CadastroDePessoas::Application.routes.draw do
+  resources :news
+
   resources :pessoas
 
   # The priority is based upon order of creation:
