@@ -1,0 +1,29 @@
+<%= form_for(@asd) do |f| %>
+  <% if @asd.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@asd.errors.count, "error") %> prohibited this asd from being saved:</h2>
+
+      <ul>
+      <% @asd.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nascimento %><br />
+    <%= f.date_select :nascimento %>
+  </div>
+  <div class="field">
+    <%= f.label :sobrenome %><br />
+    <%= f.text_field :sobrenome %>
+  </div>
+  <div class="field">
+    <%= f.label :gabriel %><br />
+    <%= f.text_field :gabriel %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

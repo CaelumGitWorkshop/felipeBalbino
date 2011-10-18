@@ -1,0 +1,27 @@
+<h1>Listing asds</h1>
+
+<table>
+  <tr>
+    <th>Nascimento</th>
+    <th>Sobrenome</th>
+    <th>Gabriel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @asds.each do |asd| %>
+  <tr>
+    <td><%= asd.nascimento %></td>
+    <td><%= asd.sobrenome %></td>
+    <td><%= asd.gabriel %></td>
+    <td><%= link_to 'Show', asd %></td>
+    <td><%= link_to 'Edit', edit_asd_path(asd) %></td>
+    <td><%= link_to 'Destroy', asd, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Asd', new_asd_path %>

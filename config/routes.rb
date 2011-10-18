@@ -1,4 +1,6 @@
 CadastroDePessoas::Application.routes.draw do
+  resources :asds
+
   resources :news
 
   resources :pessoas
